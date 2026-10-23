@@ -1,0 +1,12 @@
+import TodoItem from "./TodoItem"
+
+function TodoList({todos, onToggle, onDelete, onEdit}){
+    return (
+        <ul>
+            {todos?.map((todo, index)=> (
+                <TodoItem key={index} todo={todo} onToggle={onToggle} onDelete={onDelete} onEdit={onEdit}/>
+            ))}
+        </ul>
+    )
+}
+export default TodoList
